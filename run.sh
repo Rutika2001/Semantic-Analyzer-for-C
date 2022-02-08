@@ -4,7 +4,7 @@ YELLOW='\033[1;33m'
 NOCOLOR='\033[0m'
 
 function run() {
-	bison -d TY-CS-C-Group-46-CD-CP-Parser.y && flex TY-CS-C-Group-46-CD-CP-Scanner.l && gcc TY-CS-C-Group-46-CD-CP-Parser.tab.c lex.yy.c -w
+	bison -d Parser.y && flex Scanner.l && gcc Parser.tab.c lex.yy.c -w
 	local total_testcases="$1"
 	echo "Running: $total_testcases"
 	local start=1
